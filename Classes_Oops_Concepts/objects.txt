@@ -1,0 +1,14 @@
+Here What happens behind the seen of using the new Keyword
+
+A new object is created: The new keyword initiates the creation of a new JavaScript Object.
+
+
+A ProtoType is linked: The Newly Created Object Gets Linked To The Prototype property of the constructor function. 
+This Means That It Has Access To Properties And Methods Defined On The Constructor;s Prototype.
+
+
+The Constructor is Called: The Constructor function is called with he specified arguments and this is bound to newly created object.
+if no explicit return value is specified from the constructor. JavaScript Assume This, the newly created object, to be the intended return value.
+
+the new object is returned: After the constructor function hasbeen called, if it doesn't return a non-primitive value (object, array, function, etc.), 
+the newly created object is returned

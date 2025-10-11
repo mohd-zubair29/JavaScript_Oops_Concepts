@@ -14,3 +14,5 @@ function userData (username, age, date_of_birth, place_of_birth, state, country,
 const firUser=userData("zubair", 22, 29_01_2003, "hyderabad", "Telangana", "India" );
 console.log(firUser);
 
+
+

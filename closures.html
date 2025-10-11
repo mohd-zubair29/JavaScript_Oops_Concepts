@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Of Closures</title>
+</head>
+<body >
+    <button id="red">RED</button>
+    <button id="orange">ORANGE</button>
+    <button id="blue">BLUE</button>
+</body>
+
+<script>
+    
+//     document.getElementById('red').onclick =function (){
+// document.body.style.backgroundColor="red"
+//     }
+//     document.getElementById('orange').onclick =function (){
+// document.body.style.backgroundColor="orange"
+//     }
+//     document.getElementById('blue').onclick =function (){
+// document.body.style.backgroundColor="blue"
+//     }
+        //If we want for 100 colours then we unable to write that much of code 
+//Simply we have to use the function
+
+
+
+</script>
+<script>
+  
+  function onClickHandle(color){
+    //document.body.style.backgroundColor=`${color}`   This Will Make Directly Execution of function we cant change the colours 
+    return function(){
+        document.body.style.backgroundColor= `${color}`
+    }
+  }
+
+  document.getElementById('red').onclick=onClickHandle("red") //execute karke dedo kaha    onClickHandle=> defination dediya aiseliye thode se changes karna padhta
+//We Will Get An Executed function when we call 
+//Thats why we have to know the lexical scope 
+
+ document.getElementById('blue').onclick=onClickHandle("green")   //onClickHandle Function Takes The Color And Change when click on the button
+  document.getElementById('orange').onclick=onClickHandle("chartreuse")
+
+</script>
+
+
+</html>

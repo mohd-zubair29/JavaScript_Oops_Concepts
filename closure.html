@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure And Lexical Scope</title>
+</head>
+<body style="background-color: #313131;">
+    
+</body>
+
+<script>
+    //Example For Closure
+//     function init() {
+//   let name = "Mozilla"; // name is a local variable created by init
+//   function displayName() {
+//     // displayName() is the inner function, that forms a closure
+//     console.log(name); // use variable declared in the parent function
+//   }
+//   displayName();
+// }
+// init();
+
+   function outer(){
+    let name="Mohammed Zubair";
+    console.log("Outer Or Parent Function")
+   // console.log(inner);  //This is like parent can give to child but child wont give
+       function innerOne(){
+        let inner="This Is 1 inner Variable";
+        console.log("This Is First Inner Function", name);  //We Can Easily Access The Parent Variable In Inner Function
+       }
+       function innerTwo(){
+       // console.log(inner) inner is not defined. this Is because Of We Can't Access the child Function Properties.
+       // Only Parent Properties can be accessable
+      console.log("This Is Second Inner Function"); //
+//it is like bhai bhai ek dusre ku nai dete jaise property ka hissa
+       }
+       innerOne()  //We are calling function inside so that outer function call make execute the inner ones
+       innerTwo()
+   }
+
+   outer();
+
+</script>
+</html>
